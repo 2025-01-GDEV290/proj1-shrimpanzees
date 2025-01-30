@@ -1,0 +1,33 @@
+movement script for character requirements
+3rd person camera controller
+
+SWAD integration
+Mouse integration
+Button Press
+
+Forward, default speed
+Back, half speed
+Left Strafe, default speed
+Right Strafe, default speed
+
+Mouse 1, click, hold, release
+Mouse 2, hold
+
+-on click
+throw line to maximum length, if line hits object before weld to target
+	on weld to target play sound, connect line box to line to camera controller
+
+-on release
+release weld first, play sound, drop object at location
+	retract line back to camera controller, play sound while retract
+
+
+-on hold
+play drone audio, signifies object tether
+	ensure object tether 1:1, player:object
+	ensure that hold status is retained if mouse 2 is clicked and held but not released when tethered to object
+
+	-if mouse 1 is held, and line connect from player to object then check to see if mouse 2 is held
+	-if mouse 2 held while mouse 1 held then allow mouse 2 to have thether function between box and camera object
+	-if mouse 2 released while mouse 1 held down then allow mouse 1 to have tether retain function between box and camera object
+	-if mouse 2 release while mouse 1 NOT held down then release tether.
