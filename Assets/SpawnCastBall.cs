@@ -27,6 +27,7 @@ public class SpawnCastBall : MonoBehaviour
             spawnPoint.transform.position,
             Quaternion.identity);
         go.GetComponent<Rigidbody>().velocity = new Vector3(speed,0,0);
+        Destroy(go, 3.0f);
     }
 
 
